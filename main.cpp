@@ -29,6 +29,18 @@ bool load_strategy_file(const std::string& filepath, std::vector<std::string>& s
 }
 
 
+bool check_strategy(const std::unique_ptr<BaseStrategy>& strategy, const std::string& strategy_name)
+{
+    if (strategy == nullptr)
+    {
+        printf("Strategy %s returned null\n", strategy_name.c_str());
+        return false;                
+    }
+
+    return true;
+}
+
+
 int main(int argc, char* argv[])
 {
     argv[0] = "/home/vinicius/Documents/iterative_prisoners_dilemma/strategies.txt";
@@ -75,6 +87,11 @@ int main(int argc, char* argv[])
 
             std::unique_ptr<BaseStrategy> first_strategy = factory->create(strategy_1);
             std::unique_ptr<BaseStrategy> second_strategy = factory->create(strategy_2);
+
+            if (!check_strategy(first_strategy, strategy_1) || !check_strategy(second_strategy, strategy_2))
+            {
+                return -1;
+            }
 
             // Init variables
             bool s1_answer = false;

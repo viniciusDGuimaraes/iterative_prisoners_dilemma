@@ -1,3 +1,6 @@
+Grudge
+Sneaky
 TitForTat
 AlwaysCollab
 AlwaysDefect
+Random
