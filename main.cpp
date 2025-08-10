@@ -5,7 +5,7 @@
 #include <vector>
 #include <fstream>
 #include <unordered_map>
-#include "strategy_factory.h"
+#include "factory/strategy_factory.h"
 
 
 bool load_strategy_file(const std::string& filepath, std::vector<std::string>& strategies)

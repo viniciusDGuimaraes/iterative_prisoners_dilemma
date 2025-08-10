@@ -1,0 +1,6 @@
+#include "../strategies/always_collab.cpp"
+#include "../strategies/always_defect.cpp"
+#include "../strategies/tit_for_tat.cpp"
+#include "../strategies/grudge.cpp"
+#include "../strategies/sneaky.cpp"
+#include "../strategies/random.cpp"
